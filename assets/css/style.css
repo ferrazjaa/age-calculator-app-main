@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    --color-light-grey: hsl(0, 0%, 86%);
+    --color-light-red:hsl(0, 100%, 67%);
+    --color-off-black: hsl(0, 0%, 8%);
+    --color-off-white: hsl(0, 0%, 94%);
+    --color-purple: hsl(259, 100%, 65%);
+    --color-smoke-grey: hsl(0, 1%, 44%);
+
+}
+
+
+body{
+    background-color: var(--color-off-white);
+    font-family: Poppins, sans-serif;
+}
+
+section{
+    background-color: #fff;
+    border-radius: 2% 2% 20% 2%;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 60%;
+}
+
+.teste{
+    display: flex;
+    
+}
+
+.icon-arrow{
+    background-color: var(--color-purple);
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.icon-arrow:hover{
+    background-color: var(--color-off-black);
+}
+.entradas{
+    display: flex;
+    margin-left: auto;
+    gap: 10%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label{
+    color: var(--color-smoke-grey);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.inputs input{
+    
+    border: 0.5px solid;
+    border-color: var(--color-light-grey);
+    border-radius: 5px;
+    font-size: 32px;
+    padding: 10px;
+    width: 70%;
+}
+
+.inputs input::placeholder{
+    color: var(--color-smoke-grey);
+    letter-spacing: 2px;
+    margin-left: 2px;
+    font-weight: 700;
+}
+
+.resultado{
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 800;
+}
+.resultado p span:first-child{
+    color: var(--color-purple);
+}
+
+.campo-requerido{
+    color: var(--color-light-red);
+    font-style: italic;
+    font-weight: 400;
+}
+/* 
+#teste2{
+    background: url(../images/icon-arrow.svg) var(--color-purple) ;
+} */
+
+/* --------------------------------------------------- */
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+
+}

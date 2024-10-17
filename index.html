@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/fontes.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div class="main">
+      <div class="entradas">
+        <div class="inputs">
+          <label for="number-day" class="etiqueta">Day</label>
+          <input type="number" name="" id="number-day" placeholder="DD" required>
+          <span class="campo-requerido" id="dia-requerido"></span>
+        </div>
+  
+        <!-- mes ************************-->
+        <div class="inputs">
+          <label for="number-month" id="mes-label">Month</label>
+  
+          <input type="number" name="" id="number-month" placeholder="MM" required>
+          <span class="campo-requerido" id="mes-requerido"></span>
+        </div>
+        
+  
+  
+        <!-- ano -->
+         <div class="inputs">
+          <label for="number-year" id="ano-label">Year</label>
+          <input type="number" name="" id="number-year" placeholder="YYYY" required>
+          <p class="campo-requerido" id="ano-requerido"></p>
+         </div>
+       
+      </div>
+
+
+      <!-- arrow -->
+       
+      <div class="teste">
+        <hr> 
+        <span class="icon-arrow"><img src="assets/images/icon-arrow.svg" alt="" onclick="calcularIdade()" ></span>
+      </div>
+
+
+
+      <div class="resultado">
+        <p>
+          <span id="resultado-year">- -</span>
+          <span>years</span>
+        </p>
+        <p>
+          <span id="resultado-month">- -</span>
+          <span>months</span>
+        </p>
+        <p>
+          <span id="resultado-day">- -</span>
+          <span>days</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Jessica Ferraz</a>.
+  </div>
+
+  <script src="calculo.js"></script>
+</body>
+
+</html>
