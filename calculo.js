@@ -2,7 +2,7 @@ function calcularIdade() {
     //CHAMANDO OS INPUTS
     let numberDay = parseInt(document.getElementById("number-day").value);
 
-    let numberMonth = parseInt(document.getElementById("number-month").value);
+    let numberMonth = parseInt(document.getElementById("number-month").value) - 1;
 
     let numberYear = parseInt(document.getElementById("number-year").value);
     
@@ -17,30 +17,37 @@ function calcularIdade() {
     let colorBorders = document.getElementsByTagName('input');
     let campoRequerido = document.getElementsByClassName("campo-requerido");
 
-
+    // CALCULO DA DIFERENÇA
     //DATA HOJE
-    let hoje = new Date();
-    diaHoje = hoje.getDate();
-    mesHoje = hoje.getMonth() + 1; //o mês no js é de 0 a 11
-    anoHoje = hoje.getFullYear();
+    const hoje = new Date();
+    const anoHoje = hoje.getFullYear();
+    const mesHoje = hoje.getMonth();
+    const diaHoje = hoje.getDate();
+    
 
-    /** Calculo dos dias */
-    //usando o ano atual para poder haver essa contagem de dias
-    const dataDigitada = new Date(anoHoje, numberMonth - 1, numberDay);
+    // DATA DIGITADA
+    const dataNascimento = new Date(numberYear, numberMonth, numberDay);
+    console.log(dataNascimento)
+    const anoNascimento = dataNascimento.getFullYear();
+    const mesNascimento = dataNascimento.getMonth();
+    const diaNascimento = dataNascimento.getDate();
 
-    var dataDigitadaMilissegundos = dataDigitada.getTime();
-    var dataHojeMilissegundos = hoje.getTime();
-
-    // 1 dia em milissegundos
-    var umDiaMilissegundos = 1000 * 60 * 60 * 24;
+    // CALCULO DAS DIFERENÇAS
+    let diferencaAno = anoHoje - anoNascimento;
+    let diferencaMes = mesHoje - mesNascimento;
+    
+    // transformando a data em milissegundos
+    let diaHojeMilissegundos = hoje.getTime();
+    let diaNascimentoMilissegundos = dataNascimento.getTime();
 
     //diferença de milissegundos
-    var difMilissegundos = dataHojeMilissegundos - dataDigitadaMilissegundos;
+    let difMilissegundos = diaHojeMilissegundos - diaNascimentoMilissegundos;
+
+    //1 dia em milissegundos
+    const umDiaMilissegundos = 1000*60*60*24;
 
     //transformando em dia de novo
     var diferencaDias = Math.round(difMilissegundos / umDiaMilissegundos);
-
-
 
 
 
@@ -57,7 +64,6 @@ function calcularIdade() {
         }
 
         return; // Para a execução se houver campo vazio
-
     } 
     
     // SE AS DATAS SÃO VALIDAS

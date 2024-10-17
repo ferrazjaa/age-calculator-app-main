@@ -18,63 +18,91 @@
   </style>
 </head>
 
+<!-- 
+
+   /** Calculo dos dias */
+    //usando o ano atual para poder haver essa contagem de dias
+    const dataDigitada = new Date(anoHoje, numberMonth - 1, numberDay);
+
+    var dataDigitadaMilissegundos = dataDigitada.getTime();
+    var dataHojeMilissegundos = hoje.getTime();
+
+    // 1 dia em milissegundos
+    var umDiaMilissegundos = 1000 * 60 * 60 * 24;
+
+    //diferença de milissegundos
+    var difMilissegundos = dataHojeMilissegundos - dataDigitadaMilissegundos;
+
+    //transformando em dia de novo
+    var diferencaDias = Math.round(difMilissegundos / umDiaMilissegundos);
+
+
+
+
+-->
 <body>
+  <main class="principal">
+    <!-- entradas -->
+    <section class="entradas">
 
-  <section>
-    <div class="main">
-      <div class="entradas">
-        <div class="inputs">
-          <label for="number-day" class="etiqueta">Day</label>
-          <input type="number" name="" id="number-day" placeholder="DD" required>
-          <span class="campo-requerido" id="dia-requerido"></span>
-        </div>
-  
-        <!-- mes ************************-->
-        <div class="inputs">
-          <label for="number-month" id="mes-label">Month</label>
-  
-          <input type="number" name="" id="number-month" placeholder="MM" required>
-          <span class="campo-requerido" id="mes-requerido"></span>
-        </div>
-        
-  
-  
-        <!-- ano -->
-         <div class="inputs">
-          <label for="number-year" id="ano-label">Year</label>
-          <input type="number" name="" id="number-year" placeholder="YYYY" required>
-          <p class="campo-requerido" id="ano-requerido"></p>
-         </div>
-       
+      <!-- Dia ************************ -->
+      <div class="inputs">
+        <label for="number-day" class="etiqueta">Day</label>
+        <input type="number" name="" id="number-day" placeholder="DD" required>
+        <span class="campo-requerido" id="dia-requerido"></span>
       </div>
 
+      <!-- mes ************************-->
+      <div class="inputs">
+        <label for="number-month" id="mes-label">Month</label>
 
-      <!-- arrow -->
-       
-      <div class="teste">
-        <hr> 
-        <span class="icon-arrow"><img src="assets/images/icon-arrow.svg" alt="" onclick="calcularIdade()" ></span>
+        <input type="number" name="" id="number-month" placeholder="MM" required>
+        <span class="campo-requerido" id="mes-requerido"></span>
       </div>
 
 
 
-      <div class="resultado">
-        <p>
-          <span id="resultado-year">- -</span>
-          <span>years</span>
-        </p>
-        <p>
-          <span id="resultado-month">- -</span>
-          <span>months</span>
-        </p>
-        <p>
-          <span id="resultado-day">- -</span>
-          <span>days</span>
-        </p>
+      <!-- ano -->
+      <div class="inputs">
+        <label for="number-year" id="ano-label">Year</label>
+        <input type="number" name="" id="number-year" placeholder="YYYY" required>
+        <p class="campo-requerido" id="ano-requerido"></p>
       </div>
+
+    </section>
+
+    <!-- arrow -->
+    <div class="linha-seta">
+      <span class="linha"></span>
+      <div class="icon-arrow">
+
+        <img src="assets/images/icon-arrow.svg" alt="" onclick="calcularIdade()">
+      </div>
+    </div>
+
+
+
+
+
+    <div class="resultado">
+      <p>
+        <span id="resultado-year">- -</span>
+        <span>years</span>
+      </p>
+      <p>
+        <span id="resultado-month">- -</span>
+        <span>months</span>
+      </p>
+      <p>
+        <span id="resultado-day">- -</span>
+        <span>days</span>
+      </p>
+    </div>
 
     </div>
-  </section>
+
+  </main>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
