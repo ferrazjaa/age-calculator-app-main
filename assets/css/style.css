@@ -19,20 +19,14 @@ body{
 
 .principal{
     background-color: #fff;
-    border-radius: 2% 2% 20% 2%;
-    margin: 10% auto;
     padding: 2rem;
-    width: 60%;
     position: relative;
 }
     
 .entradas{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
     width: 90%;
-    /* margin-left: auto;
-    gap: 10%; */
 }
 .inputs{
     display: flex;
@@ -50,9 +44,7 @@ body{
     border: 0.5px solid;
     border-color: var(--color-light-grey);
     border-radius: 5px;
-    font-size: 32px;
     padding: 10px;
-    width: 60%;
 }
 
 .inputs input::placeholder{
@@ -78,12 +70,8 @@ body{
     background-color: var(--color-purple);
     border-radius: 50%;
     display: flex;
-    height: 60px;
     justify-content: center;
     position: absolute;
-    right: 20px;
-    width: 60px;
-  
 }
 
 .icon-arrow:hover{
@@ -105,10 +93,6 @@ body{
     font-style: italic;
     font-weight: 400;
 }
-/* 
-#teste2{
-    background: url(../images/icon-arrow.svg) var(--color-purple) ;
-} */
 
 /* --------------------------------------------------- */
 .attribution { 
@@ -117,4 +101,71 @@ body{
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 
+}
+
+/* MEDIA QUERIES **************************************************************************** */
+@media screen and (min-width:0) {
+    .principal{
+        border-radius: 2% 2% 20% 2%;
+        margin: 20% auto;
+        width: 90%;   
+    }
+
+    .entradas{
+        margin-bottom: 40px;
+    }
+
+    .inputs label{
+        font-size: 14px;
+    }
+    .inputs input{  
+        font-size: 20px;
+        font-weight: 700;
+        width: 80%;
+    }
+    
+    .icon-arrow{
+        height: 40px;
+        right: 20px;
+        width: 40px; 
+    }
+
+    .icon-arrow img{
+        font-weight: 800;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:758px) {
+    .principal{ 
+        border-radius: 2% 2% 20% 2%;
+        margin: 10% auto;
+        width: 60%; 
+    }
+
+    .entradas{
+        margin-bottom: 20px;
+    }
+
+    .inputs label{
+        font-size: 16px;
+    }
+
+    .inputs input{  
+        font-size: 32px;
+        width: 60%;
+    }
+
+    .linha-seta{
+        align-items: center;
+        display: flex;
+        margin-bottom: 25px;
+    }
+    
+    .icon-arrow{
+        height: 60px;
+        right: 20px;
+        width: 60px;
+      
+    }
 }

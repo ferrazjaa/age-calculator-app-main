@@ -1,7 +1,7 @@
 function calcularIdade() {
     //CHAMANDO OS INPUTS
     let numberDay = parseInt(document.getElementById("number-day").value);
-    let numberMonth = parseInt(document.getElementById("number-month").value); // Agora os meses vão de 1 a 12
+    let numberMonth = parseInt(document.getElementById("number-month").value); 
     let numberYear = parseInt(document.getElementById("number-year").value);
 
     // CAMPOS REQUERIDOS 
@@ -17,7 +17,7 @@ function calcularIdade() {
     //DATA HOJE
     const hoje = new Date();
     const anoHoje = hoje.getFullYear();
-    const mesHoje = hoje.getMonth() + 1; // Ajustando para meses de 1 a 12
+    const mesHoje = hoje.getMonth() + 1; // JS meses são de 0 a 11
     const diaHoje = hoje.getDate();
 
     // Função para colorir erros
