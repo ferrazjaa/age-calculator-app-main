@@ -19,14 +19,14 @@ body{
 
 .principal{
     background-color: #fff;
-    padding: 2rem;
+    border-radius: 2% 2% 20% 2%;
     position: relative;
 }
     
 .entradas{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    
 }
 .inputs{
     display: flex;
@@ -58,6 +58,7 @@ body{
     align-items: center;
     display: flex;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .linha{
@@ -79,8 +80,7 @@ body{
 }
 
 /* ------------------------------------- */
-.resultado{
-    font-size: 64px;
+.resultado{    
     font-style: italic;
     font-weight: 800;
 }
@@ -96,7 +96,8 @@ body{
 
 /* --------------------------------------------------- */
 .attribution { 
-    font-size: 11px; text-align: center;
+    padding: 12px;	
+    text-align: center;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
@@ -106,13 +107,14 @@ body{
 /* MEDIA QUERIES **************************************************************************** */
 @media screen and (min-width:0) {
     .principal{
-        border-radius: 2% 2% 20% 2%;
         margin: 20% auto;
+        padding: 24px;
         width: 90%;   
     }
 
     .entradas{
         margin-bottom: 40px;
+        width: 100%;
     }
 
     .inputs label{
@@ -121,12 +123,14 @@ body{
     .inputs input{  
         font-size: 20px;
         font-weight: 700;
-        width: 80%;
+        width: 100%;
     }
-    
+    .linha-seta{
+        justify-content: center;
+    }
+
     .icon-arrow{
         height: 40px;
-        right: 20px;
         width: 40px; 
     }
 
@@ -134,17 +138,26 @@ body{
         font-weight: 800;
         width: 50%;
     }
+
+    .resultado{
+        font-size: 32px;
+    }
+
+    .attribution{
+        font-size: 11px;
+    }
 }
 
 @media screen and (min-width:758px) {
     .principal{ 
-        border-radius: 2% 2% 20% 2%;
         margin: 10% auto;
+        padding: 2rem;
         width: 60%; 
     }
 
     .entradas{
         margin-bottom: 20px;
+        width: 90%;
     }
 
     .inputs label{
@@ -167,5 +180,13 @@ body{
         right: 20px;
         width: 60px;
       
+    }
+
+    .resultado{
+        font-size: 64px;
+    }
+
+    .attribution{
+        font-size: 22px;
     }
 }
