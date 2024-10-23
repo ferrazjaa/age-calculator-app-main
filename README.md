@@ -54,8 +54,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://ferrazjaa.github.io/age-calculator-app-main/)
 
 ## Meu processo (My process)
 
@@ -81,6 +80,7 @@ Durante o desenvolvimento deste projeto, aprendi a:
 
 ### Desenvolvimento Contínuo (Continued development)
 
+- Estrutura do DOM
 - Melhorar estruturas de repetições.
 - Implementar usos de funções.
 - Melhorias nas validações: se apenas alguns do campos colocados, o retorno apenas para esse campo.
